@@ -1,5 +1,10 @@
-var word = randomWord().toUpperCase(),
-    guess_word = new Array(word.length + 1).join('_').split(''),
+if (window.location.hash == "#prom") {
+    var word = "PROM?"
+} else {
+    var word = randomWord().toUpperCase();
+}
+
+var guess_word = new Array(word.length + 1).join('_').split(''),
     strikes_left = 6,
     letters_left = word.length,
     limbs = ["lleg", "rleg", "larm", "rarm", "torso", "head"],
