@@ -1,6 +1,5 @@
-var word = "ZEPHYR",
-    guess_word =
-    new Array(word.length + 1).join('_').split(''),
+var word = randomWord().toUpperCase(),
+    guess_word = new Array(word.length + 1).join('_').split(''),
     strikes_left = 6,
     letters_left = word.length,
     limbs = ["lleg", "rleg", "larm", "rarm", "torso", "head"],
@@ -10,8 +9,8 @@ var word = "ZEPHYR",
 function setLetters(guess) {
     var guess_html = "";
     for (var i = 0; i < guess.length; i++) {
-        if (guess[i] == " ") {
-            guess_html += "<span class=\"noline\"></span>";
+        if (guess[i] == " " || guess[i] == "." || guess[i] == "," || guess[i] == "!" || guess[i] == "?") {
+            guess_html += "<span class=\"noline\">" + guess[i] + "</span>";
         } else if (guess[i] == "_") {
             guess_html += "<span></span>";
         } else {
