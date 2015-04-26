@@ -152,7 +152,7 @@ h1 span {
 }
 
 .screen .screen_wrap {
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
     position: relative;
 }
@@ -197,4 +197,10 @@ h1 span {
 .screen .grant {
     left: 0;
     transform: translateX(-100%);
+}
+
+@media screen and (max-width: 920px), screen and (max-device-width: 920px) {
+    .screen img {
+        display: none;
+    }
 }
