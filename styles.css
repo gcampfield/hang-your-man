@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/opensans-extrabold-webfont.eot');
+    src: url('fonts/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/opensans-extrabold-webfont.woff2') format('woff2'), url('fonts/opensans-extrabold-webfont.woff') format('woff'), url('fonts/opensans-extrabold-webfont.ttf') format('truetype'), url('fonts/opensans-extrabold-webfont.svg#OpenSans') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans";
+}
+
+body,
+html {
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+.wrap {
+    max-width: 960;
+    margin: 40px auto 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h1 span {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #e74c3c;
+    padding: 10px;
+    margin: 0 20px;
+    border: 5px solid #e74c3c;
+    border-radius: 20px;
+    /* transform: rotate(-30deg); */
+}
+
+.vis_wrap {
+    display: inline-block;
+    width: 820px;
+}
+
+.guessed_letters {
+    float: left;
+    margin-top: 50px;
+    width: 400px;
+    min-height: 175px;
+    border-radius: 10px;
+    background: #ecf0f1;
+    color: #e74c3c;
+}
+
+.guessed_letters h2 {
+    font-size: 32px;
+}
+
+.guessed_letters .letters span {
+    display: inline-block;
+    font-size: 32px;
+    margin: 10px;
+}
+
+.guessed_letters .letters .found {
+    color: #40d47e;
+}
+
+.vis_state {
+    float: left;
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.vis_state .structure {
+    height: 100%;
+}
+
+.vis_state .noose {
+    height: 79%;
+    position: absolute;
+    top: 47px;
+    left: 48px;
+    z-index: 1;
+}
+
+.vis_state .limb {
+    display: none;
+    height: 50%;
+    position: absolute;
+    left: 178px;
+    top: 122px;
+}
+
+.text_state {
+    font-size: 48px;
+}
+
+.text_state .letters span {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 50px;
+    height: 60px;
+    border-bottom: 3px solid #e74c3c;
+    margin: 10px 10px 0;
+}
+
+.text_state .letters .noline {
+    width: 20px;
+    border-bottom: none;
+}
+
+.guess {
+    margin-top: 20px;
+}
+
+.guess .guess_input {
+    text-transform: uppercase;
+    color: #ecf0f1;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+    border: none;
+    background: #e74c3c;
+    border-radius: 5px;
+}
+
+.guess .guess_submit {
+    -webkit-appearance: button;
+    background: #ecf0f1;
+    color: #e74c3c;
+    display: block;
+    margin: 10px auto 0;
+    width: 100px;
+    height: 40px;
+    border: 3px solid #e74c3c;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.guess .guess_submit:hover {
+    background: #e74c3c;
+    color: #ecf0f1;
+}
+
+.screen {
+    display: none;
+    position: fixed;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    text-align: center;
+    background: rgba(192, 57, 43, 0.9);
+    overflow: scroll;
+    z-index: 10;
+}
+
+.screen .screen_wrap {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.screen h2 {
+    margin-top: 10vh;
+    font-size: 64px;
+}
+
+.screen p {
+    margin-top: 40px;
+    font-size: 24px;
+}
+
+.screen button {
+    background: #e74c3c;
+    color: #ecf0f1;
+    margin: 40px 0;
+    width: 200px;
+    height: 50px;
+    border: 3px solid #ecf0f1;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.screen button:hover {
+    background: #ecf0f1;
+    color: #e74c3c;
+}
+
+.screen .word {
+    font-size: 32px;
+    color: #40d47e;
+}
+
+.screen img {
+    position: absolute;
+    height: 50vh;
+}
+
+.screen .china {
+    right: 0;
+    transform: translateX(100%);
+}
+
+.screen .grant {
+    left: 0;
+    transform: translateX(-100%);
+}
+
+@media screen and (max-width: 920px) {
+    .screen img {
+        display: none;
+    }
+}
