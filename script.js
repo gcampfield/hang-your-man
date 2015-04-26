@@ -1,5 +1,13 @@
-if (window.location.hash == "#prom") {
+if (window.location.hash == "#p" || window.location.hash == "#prom") {
     var word = "PROM?"
+    $(".win button").hide();
+    $("<p></p>")
+        .text("Now will you go to prom with me?")
+        .css({
+            "font-size": "32px",
+            "color": "#2ecc71"
+        })
+        .appendTo(".win .screen_wrap");
 } else {
     var word = randomWord().toUpperCase();
 }
